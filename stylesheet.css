@@ -1,3 +1,13 @@
 .container {
     padding: 7rem;
 }
+
+.fade {
+  margin: 50px;
+  padding: 50px;
+  background-color: lightgreen;
+  transition: opacity 0.7s ease-in;
+}
+
+.fadeOut { opacity: 0; }
+.fadeIn { opacity: 1; }
