@@ -197,12 +197,12 @@ nav {
   padding: 10px 10px 5px;
   left: 4rem;
   font-size: 35px;
-  font-family: "BBH Sans Bogle", sans-serif;
+  font-famioly: "BBH Sans Bogle", sans-serif;
   font-weight: 300;
   font-style: normal;
   letter-spacing: 1px
 
-  /* margin-top: ; */
+  margin-top: ;
 }
 
 .card-mini-m {
