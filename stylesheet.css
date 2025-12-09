@@ -1,19 +1,213 @@
-.container {
-    padding: 7rem;
+:root {
+  --nav-height: 5rem;
+  --color: hsl(0, 0%, 10%);
+}
+body {
+  font: 16px Arial, sans-serif;
+  color: var(--color);
+  margin: 2;
+  padding: 0;
+  background-color: rgb(63, 64, 64);
 }
 
-.fade-in-section {
-  /* Initial State: Invisible, no vertical offset */
-  opacity: 0;
-  visibility: hidden;
+nav {
+  height: var(--nav-height);
+  /* display: none !important; */
+}
+.landing header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  margin: 0 auto;
+  margin-top: var(--nav-height);
 
-  /* Transition: only apply to opacity and visibility */
-  transition: opacity 0.6s ease-out, visibility 0.6s;
-  will-change: opacity, visibility; 
+  background-color: rgba(140, 48, 48, 0);
+  /* background-color: lightblue; */
+  width: 95%;
+  /* height: 2000px; */
+  aspect-ratio: 16 / 9;
+  /* background-color: hsl(60, 44%, 33%); */
+
+  /* box-shadow: 2px 2px; */
+}
+.landing header ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("bridgeday.jpeg");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.landing h1 {
+  margin-top: 10%;
+  margin-left: 2%;
+  font-weight: 600;
+  font-size: 90px;
+  letter-spacing: 2px;
+  text-shadow: -2px -2px 2px white, 2px -2px 2px white, -2px 2px 2px white,
+    2px 2px 2px white;
+}
+.landing figure {
+  display: inline-block;
+  /* position: relative; */
+  width: 100%;
+}
+.ogcomp {
+  position: relative;
+  padding-top: 1rem;
+  left: 0;
+  width: 55%; /* adjust size */
+  transform: translate(80%, -30%); /* moves it */
+  /* z-index: 2; */
+}
+.static {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  width: 20%; /* adjust size */
+  z-index: 1;
+  opacity: 100;
+}
+/* only hero container padding */
+.my-container {
+  border-radius: 0%;
+  /* width: 800px; */
+  width: 90%;
 }
 
-.fade-in-section.is-visible {
-  /* Final State: Fully visible, in its original position */
-  opacity: 1;
-  visibility: visible;
+.marquee {
+  font-family: "Science Gothic", sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-variation-settings: "slnt" 0, "wdth" 100, "CTRS" 0;
+  z-index: 2;
+}
+
+.old-hero {
+  height: 600px;
+  width: 100%;
+}
+/* remove giant padding from ALL containers */
+
+/* card styling */
+.my-card {
+  border: 1px solid rgba(70, 67, 67, 0.15) !important;
+  width: 90%;
+
+  border-radius: 0%;
+  overflow: hidden;
+  background-color: #282727 !important;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+.card-img-overlay {
+  z-index: 6;
+}
+
+.hero {
+  border-radius: 0%;
+}
+.ggbridge {
+  position: relative;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 800px;
+}
+
+.cardd {
+  background-position: center;
+  width: 100%;
+  height: 600px;
+  background-image: url("bridgeday.jpeg");
+}
+
+.hedda {
+  position: relative;
+  top: -60px;
+  left: 130px;
+  font-family: "BBH Sans Bogle", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: px;
+}
+
+.hero-1-text {
+  position: relative;
+  top: 50px;
+  left: 55px;
+  width: 600px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  color: hsl(0, 9%, 93%);
+
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+.card-mini {
+  margin-top: 6rem;
+  width: 100%;
+  height: 150px;
+  background-color: rgb(59, 59, 59);
+}
+
+#scrollToTopBtn {
+  position: relative;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%; /* Circular button */
+  padding: 13rem;
+  font-size: 64px;
+  color: white;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  width: 60px;
+  height: 600px;
+
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+.button {
+  margin-left: 15rem;
+  padding: 10px 20px;
+  font-size: 30px;
+  width: 300px;
+  height: 100px;
+  background-color: rgba(200, 200, 200, 0.717);
+  border-radius: 25%;
+  border-color: #282727;
+}
+
+.meep {
+  text-align: left;
+  margin: 2rem;
+  padding: 10px 10px 5px;
+  left: 4rem;
+  font-size: 35px;
+  font-famioly: "BBH Sans Bogle", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: 1px
+
+  margin-top: ;
+}
+
+.card-mini-m {
+  margin-top: 1rem;
+  width: 90%;
+  height: 600px;
+  background-color: rgb(187, 187, 187);
 }

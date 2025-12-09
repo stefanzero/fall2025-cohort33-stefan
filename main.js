@@ -1,27 +1,26 @@
-// Function to handle the intersection of elements
-function handleIntersection(entries, observer) {
-  entries.forEach(entry => {
-    // Check if the element is currently intersecting (visible)
-    if (entry.isIntersecting) {
-      // Add the 'is-visible' class to trigger the CSS transition
-      entry.target.classList.add('is-visible');
-      // Stop observing once the element has faded in (optional, but good for performance)
-      observer.unobserve(entry.target);
-    }
-  });
+// Get the button element
+let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+// When the user scrolls down, show or hide the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 200 ||
+    document.documentElement.scrollTop > 200
+  ) {
+    scrollToTopBtn.style.display = "block"; // Show the button
+  } else {
+    scrollToTopBtn.style.display = "none"; // Hide the button
+  }
 }
 
-// Set up the Intersection Observer
-const observer = new IntersectionObserver(handleIntersection, {
-  root: null, // viewport as the root
-  rootMargin: '0px', // no margin
-  threshold: 0.1, // trigger when 10% of the element is visible
-});
-
-// Find all elements with the 'fade-in-section' class
-const fadeSections = document.querySelectorAll('.fade-in-section');
-
-// Start observing each section
-fadeSections.forEach(section => {
-  observer.observe(section);
-});
+// When the user clicks on the button, scroll to the top of the document
+scrollToTopBtn.onclick = function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Smooth scrolling animation
+  });
+};
