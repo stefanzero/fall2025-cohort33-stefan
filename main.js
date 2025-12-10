@@ -1,3 +1,5 @@
+window.scrollTo(0, 0);
+
 document.addEventListener("DOMContentLoaded", () => {
   const videoButton = document.getElementById("video-button");
   const video = document.querySelector(".video"); // FIXED
@@ -33,3 +35,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }, 3000);
   });
 });
+
+/* Script for Fade in */
+ScrollReveal().reveal(".headline", { delay: 1450, duration: 1500 });
+ScrollReveal().reveal(".tagline", { delay: 3000, duration: 1500 });
+ScrollReveal().reveal(".punchline", { delay: 1500, duration: 1500 });
